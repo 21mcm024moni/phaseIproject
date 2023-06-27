@@ -1,0 +1,71 @@
+ body
+	{
+	 margin-top:150px;
+     background: rgb(174,238,238);
+background: radial-gradient(circle, rgba(174,238,238,1) 0%, rgba(174,235,205,1) 10%, rgba(233,148,185,1) 100%);
+	}
+   .container{
+      color:white;
+      background: rgb(6,90,100);
+      background: linear-gradient(90deg, rgba(6,90,100,0.6840861344537815) 0%, rgba(205,21,241,1) 69%);
+	  font-family: Arial, Helvetica, sans-serif;
+	  margin-top:0px;
+	  margin-left:470px;
+	  align:center; 
+	  border-radius:20px;
+	  width:25%;
+	  
+   }
+   .container h1{
+               margin-top:0px;
+			   margin-left:100px;
+			   
+			   }
+         .rounded-input{
+                width:25%;
+				margin-left:450px;
+                border-radius:15px;
+                padding: 10px;
+				border-style:solid;
+	            justify-content:center;
+				text-align:center;
+				border:0;
+			    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+                }
+	input[type=text],input[type=password] {
+                      padding: 10px;
+					  margin:10px 0;
+					  border:0;
+					  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+					  border-radius:15px;
+					  width:50%;
+					  text-align:center;
+                     }
+	.login{
+	       background: rgb(6,90,100);
+           background: linear-gradient(90deg, rgba(6,90,100,0.6840861344537815) 0%, rgba(205,21,241,1) 69%);
+           border: none;
+           color: white;
+           padding: 15px 32px;
+           text-align: center;
+           text-decoration: none;
+           font-size: 20px;
+		   font-family: Arial, Helvetica, sans-serif;
+           margin: 10px 80px;
+           cursor: pointer;
+		   border-radius: 25px;
+		   width:50%;
+		   font-weight:200%;
+		   display:block;
+		   
+	
+	   }
+	   
+	    .pass_error{
+		   margin-top:5px;
+		   width:345px;
+		   font-size:18px;
+		   color:#C62828;
+		   
+	   }
+	   

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css"   > 
+    <script src="../Script/jqueryScript.js"></script>
+   
+    
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>$(document).ready(function () {
+    $("#span1").hide();
+    username = $("#username").val(null);
+            password = $("#txbpassword").val(null);
+    
+
+
+    $("#login").click(function () {
+
+
+        var username = $("#username").val();
+        var password = $("#txbpassword").val();
+
+
+
+        if (username !="" && password != "" &&  password.length > 8) {
+
+
+            $("#span1").hide();
+
+            location.href = "test.html";
+            username = $("#username").val(null);
+            password = $("#txbpassword").val(null);
+
+            return true;
+
+
+        }
+        else if ( password != "" && password.length < 8  ) {
+      $("#span1").text("Password should be at least 8 characters long.").show();
+      return false;
+    }
+        else {
+           
+            $("#span1").show(); return false;
+        }
+        return false;
+    });    });
+	</script>
+
+	
+	
+ </head>
+ <body>
+   <form   name="form1"  >
+    <div class="container" >            
+            <h1>Login</h1>
+    </div>
+    <div class="rounded-input"  >
+	       <input type="text"  id="username" placeholder="Enter your username" ><br><br>
+		 
+		   <input type="password"  id="txbpassword" name="txbpassword" placeholder="Password" >
+		   <div class="pass_error"> <span id="span1"> please fill correct details</span></div>
+		   <label>
+		   
+		   
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>&nbsp;
+		   <label> <a href="#">Forgot Password?</a></label>
+		   
+		   <button class="login" id="login" >Sign in</button>
+		   <p>Not a member?<a href="Register1.html" style="color:#15c0f1">&nbsp;Signup now</a></p>
+           	</div>	   
+		   
+
+     </form>	 
+ 
+ </body>
+ 
+</html>
+	
+	

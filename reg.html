@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration form</title><script src="jqueryScript.js"></script>
+    <script>
+        $(document).ready(function () {
+            if()
+
+        });
+    </script>
+    <script> 
+  window.addEventListener("load", function () {
+    // Get form elements
+    var form = document.getElementById("form");
+    var firstname = document.getElementById("firstname");
+    var lastname = document.getElementById("lastname");
+    var dob = document.getElementById("dob");
+    var email = document.getElementById("email");
+    var gender = document.getElementById("gender");
+    var phone = document.getElementById("phone");
+    var state = document.getElementById("state");
+    var city = document.getElementById("city");
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    var cpassword = document.getElementById("cpassword");
+
+    
+    form.addEventListener("submit", function (event) {
+      // Validate firstname
+      if (firstname.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("firstname-error").textContent =
+          "Please enter your firstname";
+      }
+
+      
+      if (lastname.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("lastname-error").textContent =
+          "Please enter your lastname";
+      }
+
+      
+      if (dob.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("dob-error").textContent =
+          "Please enter your date of birth";
+      }
+
+      
+      if (email.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("email-error").textContent =
+          "Please enter your email";
+      }
+
+      
+      if (gender.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("gender-error").textContent =
+          "Please select your gender";
+      }
+
+      
+      if (phone.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("phone-error").textContent =
+          "Please enter your phone number";
+      }
+
+      
+      if (state.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("state-error").textContent =
+          "Please select your state";
+      }
+
+      
+      if (city.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("city-error").textContent =
+          "Please enter your city";
+      }
+
+      
+      if (username.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("username-error").textContent =
+          "Please enter a username";
+      }
+
+      
+      if (password.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("password-error").textContent =
+          "Please enter a password";
+      }
+
+      
+      if (cpassword.value.trim() === "") {
+        event.preventDefault();
+        document.getElementById("cpassword-error").textContent =
+          "Please confirm your password";
+      } else if (password.value.trim() !== cpassword.value.trim()) {
+        event.preventDefault();
+        document.getElementById("cpassword-error").textContent =
+          "Passwords do not match";
+      }
+    });
+
+    
+    firstname.addEventListener("input", function () {
+      document.getElementById("firstname-error").textContent = "";
+    });
+
+    lastname.addEventListener("input", function () {
+      document.getElementById("lastname-error").textContent = "";
+    });
+
+    dob.addEventListener("input", function () {
+      document.getElementById("dob-error").textContent = "";
+    });
+
+    email.addEventListener("input", function () {
+      document.getElementById("email-error").textContent = "";
+    });
+
+    gender.addEventListener("input", function () {
+      document.getElementById("gender-error").textContent = "";
+    });
+
+    phone.addEventListener("input", function () {
+      document.getElementById("phone-error").textContent = "";
+    });
+
+    state.addEventListener("input", function () {
+      document.getElementById("state-error").textContent = "";
+    });
+
+    city.addEventListener("input", function () {
+      document.getElementById("city-error").textContent = "";
+    });
+
+    username.addEventListener("input", function () {
+      document.getElementById("username-error").textContent = "";
+    });
+
+    password.addEventListener("input", function () {
+      document.getElementById("password-error").textContent = "";
+    });
+
+    cpassword.addEventListener("input", function () {
+      document.getElementById("cpassword-error").textContent = "";
+    });
+  });
+</script>
+
+
+  <style>
+    body {
+      background: rgb(174, 238, 238);
+      background: radial-gradient(
+        circle,
+        rgba(174, 238, 238, 1) 0%,
+        rgba(174, 235, 205, 1) 10%,
+        rgba(233, 148, 185, 1) 100%
+      );
+      margin: 0;
+    }
+
+    .heading h1 {
+      margin: 0px 0px 20px;
+      color: #065a64;
+      text-shadow: 2px 4px 4px rgba(46, 91, 173, 0.6);
+      text-align: center;
+    }
+
+    .container {
+      width: 400px;
+      font-family: sans-serif;
+      background-color: white;
+      margin: 5vh auto 0 auto;
+      padding: 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.06);
+      background-color: white-smoke;
+      color: black;
+    }
+
+    .input-group input {
+      display: flex;
+      flex-direction: column;
+      color: black;
+      padding: 10px 0;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 0;
+      box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.06);
+      width: 100%;
+      text-align: center;
+    }
+
+    .input-group input:focus {
+      outline: 0;
+    }
+
+    select {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border: 0;
+      box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.06);
+      border: none;
+    }
+
+    .input-group .error {
+      color: red;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px 40px;
+      font-size: 20px;
+      background-color: #065a64;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #2f4f4f;
+    }
+  </style>
+</head>
+
+<body>
+  <form name="regform" id="form" runat="server">
+    <div class="container">
+      <div class="heading">
+        <h1>Registration form</h1>
+      </div>
+      <div class="input-group">
+        <label for="firstname"><b>Firstname</b></label>
+        <input type="text" id="firstname" name="firstname" size="40" placeholder="Enter your name"  />
+        <div class="error" id="firstname-error"></div>
+      </div>
+      <div class="input-group">
+        <label for="lastname"><b>Lastname</b></label>
+        <input type="text" id="lastname" name="lastname" placeholder="Your lastname" size="50" >
+        <div class="error" id="lastname-error"></div>
+      </div>
+      <div class="input-group">
+	       <label for="dob"><b>Date of birth</b></label>
+           <input type="date" id="dob" name="dob" size="50" >
+		   <div class="error" id="dob-error"></div>
+	   </div>
+	   <div class="input-group">
+           <label for="email" ><b>Email</b></label>
+	       <input type="email" id="email" name="email" placeholder="abc@gmail.com" size="50" >
+		   <div class="error" id="email-error"></div>
+	   </div>	
+	   <div class="input-group">
+           <label><b>Gender</b></label>
+           <select name="gender" id="gender"  >
+               <option value="" disabled selected>Select gender</option>
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+               <option value="Others">Others</option>
+           </select>
+           <div class="error" id="gender-error"></div>
+	   </div>
+	   <div class="input-group">
+	       <label for="phone"><b>Phone Number</b></label>
+	       <input type="number" id="phone"  name="phone" size="50" placeholder="Enter phone no"  >
+		   <div class="error" id="phone-error"></div>
+	   </div>		   
+	   <div class="input-group">
+           <label for="state"><b>State</b></label>
+           <select name="state" id="state"  >
+               <option value="" disabled selected>Select state</option>
+               <option value="Andhra Pradesh">Andhra Pradesh</option>
+               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+               <option value="Assam">Assam</option>
+               <option value="Bihar">Bihar</option>
+           </select>
+           <div class="error" id="state-error"></div>
+	   </div>		   
+	   <div class="input-group">
+	       <label for="city"><b>City</b></label>
+	       <input type="text" id="city" name="city" placeholder="Enter your city" size="50"  >
+	       <div class="error" id="city-error"></div>	
+	   </div>
+	   <div class="input-group">
+	       <label for="username"><b>Username</b></label>
+	       <input type="text" id="username" name="username" placeholder="username" size="50"  >
+	       <div class="error" id="username-error"></div>
+	   </div>			  
+	   <div class="input-group">
+	       <label for="password"><b>Password</b></label>
+	       <input type="password" id="password" name="password" placeholder="create password" size="50"  >
+	       <div class="error" id="password-error"></div>	
+	   </div>			  
+	   <div class="input-group">
+	       <label for="cpassword"><b>Confirm Password</b></label>
+	       <input type="password" id="cpassword" name="cpassword" size="50" placeholder="re-enter your password"  >
+	       <div class="error" id="cpassword-error"></div>	
+       </div>	
+       <button type="submit">Submit</button>		  
+	</div>	  
+  </form>
+</body>
+</html>
